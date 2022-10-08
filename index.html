@@ -3,73 +3,85 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Fonte importada google.fonts.com-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Lincando styles.css-->
     <link rel="stylesheet" href="styles.css">
-    <title>RafaFólio</title>
+
+    <!--Favicon colocar icone no título-->
+    <link rel="shortcut icon" href="icones/Instagram120.ico" type="image/x-icon">
+    <title>Instagram</title>
 </head>
 
 <body>
-    <header class="cabecalho" id="inicio">
-        <h1 class="cabecalho_titulo">Rafa<span class="cabecalho_titulo_folio">Fólio</span></h1>
-        <ul class="cabecalho_lista">
-            <li  class="cabecalho_lista_item"><a href="#inicio">Início</a></li>
-            <li  class="cabecalho_lista_item"><a href="#sobre">Sobre</a></li>
-            <li  class="cabecalho_lista_item"><a href="#projetos">Projetos</a></li>
 
-        </ul>
-    </header>
+    <div class="container-imagens">
 
-    <section class="container-principal">
+        <img class="img-celular" src="img/celular.png" alt="Celular">
 
-        <img class="container-principal-imagem" src="imagem_homem.png" alt="">
-        <div>
-            <h2 class="container-principal-titulo">Olá mundo!</h2>
-            <p class="container-principal-texto">Rafael Morales, dev front-end <br> inciante como professor
-                <br> do componente pensamento computacional. <br> Colégio Vale do Tigre - Nova Londrina - PR.
-            </p>
+        <!--Adicionar as imagens para dar dinamica nas imagens com javascript-->
+        <img   class="imagem-celular" src="img/insta1.png" alt="">
+        <img  class="imagem-celular"  id="troca-imagem"  src="img/insta2.png" alt="">
+
+    </div>
+
+    <div class="container-itens">
+
+        <div class="container-form">
+            <img class="insta-logo" src="img/insta-logo.png" alt="Logo Instagram">
+            <!-- placeholder coloca texto dentro do input-->
+            <input placeholder="Telefone, nome de usuário ou e-mail">
+            <input placeholder="Senha">
+
+            <!--inserindo botão-->
+            <button>Entrar</button>
+            <!--Criando links-->
+            <img  class="imagem-face" src="img/facebook.png" alt="">
+            <a class="login-facebook" href="https://www.facebook.com/"> Entrar com o Facebook</a>
+            <a class="esqueceu-senha">Esqueceu a senha?</a>
         </div>
-    </section>
 
-
-    <section id="sobre" class="container-secundario">
-        <div class="container-secundario-textos">
-            <p class="container-secundario-texto">Trabalho com as linguagens de desenvolvimento web, mas o meu nível é
-                apenas iniciante.
-            </p>
-            <p class="container-secundario-texto">Tecnologias utilizadas</p>
-            <ul class="container-secundario-lista">
-
-                <li class="container-secundario-item"> HTML</li>
-                <li class="container-secundario-item"> CSS</li>
-                <li class="container-secundario-item"> JS</li>
-
-            </ul>
+        <div class="container-cadastro">
+            <p class="paragrafo-conta">Não tem uma conta?</p><a class="link-cadastro">Cadastrar-se</a>
         </div>
-        <img class="container-secundario-imagem" src="imagem_estudo.png" alt="">
 
-    </section>
+        <p class="paragrafo-app">Obtenha o aplicativo</p>
+        <div class="container-app">
+            <img class="logo-app" src="img/ios.png" alt="Logo do ios">
 
-
-    <section id="projetos" class="container-portfolio">
-        <h2 class="container-projeto-titulo">Projetos</h2>
-        <p class="container-projeto-link"><a href="https://rafaelmor2010.github.io/RafaPortif-lio/">Potfólio no github -
-                https://rafaelmor2010.github.io/RafaPortif-lio/</a></p>
-        <p class="container-projeto-link"><a
-                href="https://rafaelmor2010.github.io/Projeto_Interface_Instagram/">Interface Instagram no github -
-                https://rafaelmor2010.github.io/Projeto_Interface_Instagram/</a></p>
-    </section>
-
-    <footer class="rodape">
-
-        &copy;Copyright 2022
-
-    </footer>
+            <img class="logo-app" src="img/google.png" alt="Logo do google">
+        </div>
+    </div>
 </body>
+
+
+<script>
+/*let imagem é a variável  - document é o pagina html para chamar id criado no html com getElementById*/
+/*pegando as duas imagens que dentro do htmlpara fazer efeito de troca de imagem*/
+let imagem = document.getElementById("troca-imagem");
+
+/*criando uma função para imagem sumir*/
+function trocaImagem() {
+/*se a imagem estiver apagada então recebe 1 para aparecer novamente*/
+if(imagem.style.opacity == 0){
+    imagem.style.opacity = 1
+
+}else{/*se não ou seja imagem tiver 1 ou seja normal então apagar novamente*/
+    imagem.style.opacity = 0;
+}
+
+
+}
+
+/*chamndo a função trocaImagem para sumir a cada 3 segundos*/
+setInterval(function() {
+    trocaImagem();
+}, 4000);
+
+
+
+</script>
+
+
 
 </html>

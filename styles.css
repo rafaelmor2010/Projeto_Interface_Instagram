@@ -1,175 +1,211 @@
-/*resetar*/
+/*resetando a margim e padding*/
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/*colocando uma cor de fundo*/
+/*cor em  hexadecimal*/
 body {
-    background-color: rgb(66, 6, 66);
-    font-family: Silkscreen;
-}
-
-/*mudando a cor do header class .cabecalho*/
-.cabecalho {
-    background: white;
-    
-}
-
-.cabecalho_titulo_folio {
-    /*colocando espeçura mais fina*/
-    font-weight: 250;
-    color:  rgb(116, 6, 116);
-}
-
-.cabecalho_titulo {
-    color:  rgb(51, 2, 51);
-}
-
-.cabecalho_lista {
-    /*colocando os elementos ao lado do outro*/
-    /*colocando os elementos em uma única linha*/
+    background: #fafafa;
+    /*largura 100%*/
+    width: 100vw;
+    /*altura 100%*/
+    height: 100vh;
     display: flex;
-    /*tirando style ou seja tirando a bolia da lista*/
-    list-style-type: none;
-    
-   
-}
-
-.cabecalho_lista_item {
-     /*colocando espaçamento nos elementos*/
-     margin: 0 25px;
-    
-}
-
-
-.cabecalho_lista_item a {
-    color: black;
-    /*tirando sublinhado */
-    text-decoration: none;
-
-}
-
-/*colocando todos elemento do header colocando ao lado do outro*/
-.cabecalho {
-    display: flex;
-    /*colocando os elemento no canto direito e espaçamento entre os elementos*/
-    justify-content: space-between;
-    /*espaçamento interno 0 cima e baixo e direita e esquerda 20px*/
-     padding:0 25px ;
-    /*alinhando os lementos ao centro da linha*/
+    /*justifica o conteúdo ao centro*/
+    justify-content: center;
+    /*colocou os itens ao centro da página*/
     align-items: center;
 }
 
 
-/*colocando conteúdo section colocando um do lado do outro*/
-.container-principal {
+.img-celular {
+    /*largura da imagem*/
+    width: 450px;
+}
+
+.container-itens {
+
+    width: 350px;
+}
+
+.container-form {
+    /*coloca um do lado do outro*/
     display: flex;
-    /*alinhando os elemento ao centro*/
+    /*coloca um baixo do outro*/
+    flex-direction: column;
+    /*espeçura da borda linnha solida e cor*/
+    border: 1px solid #dbdbdb;
+    background: #fafafa;
+
+    padding-top: 50px;
+    padding-right: 40px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+
+    /* mesma coisa que o codigo de cima
+    padding: 50px 40px 20px 40px*/
+
+}
+
+
+.insta-logo {
+    /*espaço externo para baixo*/
+    margin-bottom: 20px;
+
+}
+
+
+input {
+    /*mudar altura do input*/
+    height: 36px;
+
+    /*tirar linha azul do campo input*/
+    outline: none;
+
+    /*configurando a borda do campo input*/
+    border: 1px solid #dbdbdb;
+
+    /*arredondar a borda do campo input*/
+    border-radius: 3px;
+    /*da espaço interno lado esquerdo empurrando conteúdo mais para direira*/
+    padding-left: 5px;
+    /*da espaço lado externo do input na parte de cima*/
+    margin-top: 5px;
+    color: #262626;
+
+}
+
+button {
+    /*trocando cor de fundo*/
+    background: #0095f6;
+    /*altura */
+    height: 30px;
+    /*arredondando os cantos do botão*/
+    border-radius: 3px;
+    /*tirando borda*/
+    border: none;
+    /*mudando cor do texto*/
+    color: #ffffff;
+    /*espaço externo na parte de cima*/
+    margin-top: 5px;
+
+    /*cursor virar uma mão  ao passar mouse no botão*/
+    cursor: pointer;
+}
+
+
+.login-facebook {
+
+    /*cor da fonte*/
+    color: #385185;
+
+    /*fonte em negrito*/
+    font-weight: bold;
+
+    /*alinhamento do texto ao centro*/
+    text-align: center;
+    /* espaço externo parte de cima*/
+    margin-top: 20px;
+
+    /*espaço externo para baixo*/
+    margin-bottom: 20px;
+    cursor: pointer;
+    /*tamanho fonte*/
+    font-size: 14px;
+    /*tira a decoração tipo um linha em baixo*/
+    text-decoration: none;
+}
+
+.esqueceu-senha {
+
+    color: #385185;
+    text-align: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.container-cadastro {
+    display: flex;
     justify-content: center;
-    /*espaçamento entre cabeçalho header e section*/
+    align-items: center;
+    margin-top: 20px;
+    border: 1px solid color #dbdcdcdc;
     padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.paragrafo-conta {
+    font-size: 14px;
 
 
 }
 
-/*formatando a imagem deixando com tamanho ideal*/
-.container-principal-imagem {
-/*largura da imagem*/
-    width: 30%;
+.link-cadastro {
+    /*Color mudar a cor da fonte*/
+    color: #0095f6;
+    /*mudar a fonte parecido com negrito*/
+    font-weight: bold;
+    /*tamanho da fonte*/
+    font-size: 14px;
+    /*espaçamento externo para nesgrudar*/
+    margin-left: 5px;
+
+    /*muda o formato do cursor*/
+    cursor: pointer;
+}
+
+
+.paragrafo-app {
+    /*espaçamento externo a cima*/
+    margin-top: 20px;
+    /*espaçamento externo a baixo*/
+    margin-bottom: 20px;
+    /*deixando ao centro*/
+    text-align: center;
+}
+
+.container-app {
+    display: flex; /*colocando as imagens um ao lado do outro*/
+    gap: 10px/*utlizado para dar espaçamento entre o itens, utilizado apenas na DIV*/;
+    justify-content: center;
 
 }
-/*aumentando tamanho da fonte do título*/
-.container-principal-titulo {
-    font-size: 55px;
-    color: rgb(102, 100, 112);
+
+
+.logo-app {
+    width: 150px;
+    
 
 }
-.container-principal-texto {
-    font-size: 25px;
-    color: #e0dfe0;
+
+
+.imagem-celular {
+
+    height: 520px;
+ /*utilizando para pocionar onde eu quero*/
+    position:absolute;
+    left: 153px;
+    top: 27px;
+   /*fazendo efeito trasição para ficar mais fluido  incio e começo da trasition*/
+    transition: opacity 2s ease-in-out;
   
 }
 
-/*Colocando os elemento um do lado do outro*/
-.container-secundario {
-    display: flex;
-    padding-top: 35px;
-    /*deixando os lementos ao centro*/
-   
-    
-}
-
-/*configurando a largura da imagem*/
-.container-secundario-imagem {
-    width: 30%;
-}
-.container-secundario {
-    color:#e0dfe0;
-    justify-content: center;
-
- 
-}
-
-.container-secundario-textos {
-    /*40vw significa view port 40 % da tela*/
-    width: 40vw;
-    font-size: 25px;
-   
-}
-
-/*tirando as bolinhas da lista*/
-.container-secundario-lista {
-    display: flex;
-    /*tirando o estilo da lista ou seja as bolinhas*/
-    list-style-type: none;
-    /*espaçamento entre os elementos*/
-    justify-content: space-around; 
-    
-}
-
-.container-secundario-item {
-background-color: blueviolet;
-/*espaçamento interno*/
-padding: 10px;
-border-radius: 15px;
-margin-top: 20px;
-}
-
-
-/*section protifolio*/
-.container-portfolio {
-    background-color: white;
-    color: rgb(51, 2, 51);
-    padding-bottom: 25px;
+.container-imagens {
+    /* classe pai DIV se for relative as imagens se mexem juntas mas se tiver class filha como position absolution*/
+    position: relative;
 }
 
 
 
-.container-projeto-titulo {
-    font-size: 40px;
-    
+.imagem-face {
+
+    width: 50px;
+    position: absolute;
+    left: 55.6px;
+    top: 268px;
 }
 
-.container-projeto-link a {
-   
-    color: rgb(51, 2, 51);
-}
-
-.container-projeto-link a:hover {
-    margin: 10px;
-    color: blueviolet;
-}
-
-.container-projeto-link {
-   padding: 5px;
-}
-
-.rodape {
-    background-color: blueviolet;
-    color: white;
-    font-weight: bolder;
-    text-align: center;
-    padding: 20px 20px 20px 20px;
-    
-}
